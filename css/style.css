@@ -1,5 +1,17 @@
 /* Site Design and Global Settings */
 
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+
+
+:root {
+    --headfont: "Playfair Display", serif;
+    --bodyfont: "DM Sans", sans-serif;
+    --headsize: 48px;
+    --bodysize: 16px;
+    --black: #0e0e0e
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -9,21 +21,59 @@ body {
 }
 
 .layout {
-    width: 1140px;
+    width: 1200px;
     align-self: center;
     justify-self: center;
+}
+
+.horizontal {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 }
 
 
 /* Header */
 
 header {
-    background-color: black;
+    display: flex;
+    height: 100px;
+    align-items: center;
+}
+
+header .logo {
+    width: 160px;
+}
+
+.logo img {
     width: 100%;
 }
 
+nav {
+    width: 440px;
+    width: 440px;
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+    justify-content: start;
+}
 
+nav a {
+    font-family: var(--bodyfont);
+    font-size: var(--bodysize);
+    text-decoration: none;
+    color: var(--black);
+}
 
-#logo {
-    width: 200px;
+.side-nav {
+    width: 440px;
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+    justify-content: end;
+} 
+
+.side-nav img {
+    width: 20px;
 }
