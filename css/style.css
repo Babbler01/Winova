@@ -14,7 +14,7 @@
     --grey: #;
     --lightgrey: #e9e9e9;
     --red: #;
-    --yellow: #;
+    --yellow: #ff9800;
     --line: 110%;
 }
 
@@ -36,6 +36,13 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+}
+
+.vertical {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 
@@ -74,6 +81,10 @@ nav a {
     color: var(--black);
 }
 
+nav a:hover, nav a:active {
+    color: var(--yellow);
+}
+
 .side-nav {
     width: 440px;
     display: flex;
@@ -92,7 +103,9 @@ nav a {
 .hero {
     width: 100%;
     display: flex;
-    flex-direction: row;
+    flex-direction: row;  
+    align-items: center;
+    
 }
 
 .left {
@@ -101,7 +114,8 @@ nav a {
     flex-direction: row;
     justify-content: end;
     align-items: center;
-    background-color: var(--lightgrey);
+    padding: 50px 0;
+    background-color: var(--lightgrey);  
 }
 
 .left .box {
@@ -111,7 +125,7 @@ nav a {
     flex-direction: column;
     justify-content: space-between;
     margin-right: 60px;
-    height: 600px;
+    height: 540px;
 }
 
 h1 {
@@ -132,11 +146,13 @@ p {
 
 .right {
     width: 50%;
+    height: 640px;
 }
 
 .right img {
     width: 100%;
-    height: 640px;
+    height: 680px;
     object-fit: cover;
 }
+
 
