@@ -1,0 +1,31 @@
+/* Site Design and Global Settings */
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.layout {
+    width: 1140px;
+    align-self: center;
+    justify-self: center;
+}
+
+
+/* Header */
+
+header {
+    background-color: black;
+    width: 100%;
+}
+
+.top {
+    
+}
+
+#logo {
+    width: 200px;
+}
