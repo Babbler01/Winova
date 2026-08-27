@@ -105,6 +105,8 @@ p {
 }
 
 
+
+
 /* Header */
 
 header {
@@ -153,6 +155,72 @@ nav a:hover, nav a:active {
 .side-nav img {
     width: 20px;
 }
+
+
+
+
+
+/* Footer */
+
+footer {
+    background-color: var(--black);
+    padding: 80px 0;
+}
+
+.foot-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 80px;
+}
+
+.foot {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.foot p, .foot a {
+    color: var(--white);
+    text-decoration: none;
+    font-family: var(--bodyfont);
+    font-size: 16px;
+    padding: 0;
+    margin: 0;
+}
+
+.foot h6 {
+    color: var(--white);
+    padding-bottom: 8px;
+}
+
+.foot img {
+    width: 160px;
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.copyright {
+    background-color: var(--yellow);
+    margin-top: 80px;
+    padding: 16px;
+    display: flex;
+    justify-content: center;
+}
+
+.copyright p {
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+
 
 
 
@@ -282,26 +350,72 @@ nav a:hover, nav a:active {
     margin: 0;
 }
 
-/* More */
+/* More / About Page */
+
+.column {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 60px;
+    padding: 60px 0;
+}
+
 .col {
     background: none;
     width: 50%;
 }
 
-.col-left {
+.col h6 {
+    font-size: 16px;
+    font-family: var(--bodyfont);
+    letter-spacing: 8%;
+    color: var(--yellow);
+    padding-bottom: 4px;
+    
+}
+
+.column-left {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    justify-content: start;
-    margin: 0 60px 0 0;
-    height: 540px;
+    margin: 0;
+    gap: 8px;
 }
 
 .col img {
     width: 100%;
     height: 560px;
+    object-fit: cover;
 }
 
+.team-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.team-blk {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.team-blk img {
+    width: 100%;
+}
+
+.team-blk h5 {
+    font-family: var(--bodyfont);
+    font-size: 22px;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.team-blk p {
+    font-size: 16px;
+}
 
 
 /* Partners Page */
