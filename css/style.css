@@ -59,11 +59,11 @@ h1 {
 }
 
 h2 {
-    font-size: 56px;
+    font-size: 60px;
 }
 
 h3 {
-    font-size: 44px;
+    font-size: 48px;
 }
 
 h4 {
@@ -381,3 +381,96 @@ nav a:hover, nav a:active {
     border: none;
     cursor: pointer;
 }
+
+
+/* Homepage Collection */
+
+
+.collections-blk {
+    width: 100%;
+    gap: 40px;
+}
+
+.blk-left, .blk-right {
+    width: 50%;
+}
+
+.blk-left {
+    height: 600px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9)), url('/img/site/sparkling.jpg');background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+}
+
+.col-card {
+    width: 100%;
+    height: 520px;
+    display: flex;
+    flex-direction: column;
+    color: var(--white);
+    text-decoration: none;
+    padding: 40px;
+    gap: 16px;
+    justify-content: end;
+}
+
+.blk-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 40px;
+} 
+
+.card-up {
+    height: 280px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9)), url('/img/site/white-wine.jpg');background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+}
+
+.card-down {
+    height: 280px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9)), url('/img/site/rose_wine_bucket.webp');background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.coll {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    color: var(--white);
+    text-decoration: none;
+    padding: 40px;
+    gap: 16px;
+    justify-content: end;
+}
+
+.collections-blk h5, .collections-blk p {
+    padding: 0;
+    margin: 0;
+}
+
+/* More */
+.col {
+    background: none;
+    width: 50%;
+}
+
+.col-left {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    margin: 0 60px 0 0;
+    height: 540px;
+}
+
+.col img {
+    width: 100%;
+    height: 560px;
+}
+
