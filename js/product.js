@@ -1,21 +1,24 @@
-
 // Establish URL
 const params = new URLSearchParams(window.location.search);
 
-
-// Gets product ID
+// Get product ID
 const productId = Number(params.get("id"));
 
-
-// Searches products.js for Specific Product by ID
+// Find product
 const product = wines.find(wine => wine.id === productId);
 
 
-// Single Product Page
-
+// Display Single Product
 function displayProduct(product) {
 
     const container = document.getElementById("product-details");
+
+    const breadcrumbProduct =
+        document.getElementById("breadcrumb-product");
+
+    if (breadcrumbProduct) {
+        breadcrumbProduct.textContent = product.name;
+    }
 
     container.innerHTML = `
         <div class="single-product-image">
@@ -52,7 +55,7 @@ function displayProduct(product) {
 
                 <div>
                     <strong>Alcohol</strong>
-                    <span>${product.alcohol}</span>
+                    <span>${product.alcohol}%</span>
                 </div>
 
             </div>
@@ -77,23 +80,93 @@ function displayProduct(product) {
     `;
 }
 
-if (product) {
-    displayProduct(product);
+
+// Create Related Product Card
+function createRelatedProductCard(wine) {
+
+    return `
+        <div class="product-card">
+
+            <div class="product-image">
+                <img src="${wine.image}" alt="${wine.name}">
+            </div>
+
+            <div class="product-info">
+
+                <div>
+
+                    <p class="product-category">
+                        ${wine.category}
+                    </p>
+
+                    <h3 class="product-name">
+                        ${wine.name}
+                    </h3>
+
+                </div>
+
+                <div class="product-bottom">
+
+                    <span class="product-price">
+                        ₦${wine.price.toLocaleString()}
+                    </span>
+
+                    <a href="product.html?id=${wine.id}" class="view-product">
+                        View Details
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+    `;
 }
 
-// Handle Error and invalid product
 
+// Display Related Products
+function displayRelatedProducts() {
+
+    const relatedContainer =
+        document.getElementById("related-products");
+
+    if (!relatedContainer) {
+        return;
+    }
+
+    const relatedProducts = wines
+        .filter(wine =>
+            wine.category === product.category &&
+            wine.id !== product.id
+        )
+        .slice(0, 4);
+
+    relatedContainer.innerHTML = relatedProducts
+        .map(wine => createRelatedProductCard(wine))
+        .join("");
+}
+
+
+// Display Page
 if (product) {
 
     displayProduct(product);
+
+    displayRelatedProducts();
 
 } else {
 
     document.getElementById("product-details").innerHTML = `
         <div class="product-not-found">
             <h1>Product Not Found</h1>
-            <p>Sorry, we couldn't find the product you're looking for.</p>
-            <a href="products.html">Back to Products</a>
+
+            <p>
+                Sorry, we couldn't find the product you're looking for.
+            </p>
+
+            <a href="products.html">
+                Back to Products
+            </a>
         </div>
     `;
 }
