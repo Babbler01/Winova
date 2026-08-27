@@ -1,5 +1,4 @@
-
-// Create Product Card
+// Function to Create Product Card
 function createProductCard(wine) {
     return `
         <div class="product-card">
@@ -15,7 +14,6 @@ function createProductCard(wine) {
 
                     <h3 class="product-name">${wine.name}</h3>
                 </div>
-
 
                 <div class="product-bottom">
 
@@ -36,9 +34,7 @@ function createProductCard(wine) {
 }
 
 
-
-// Display Products
-
+// Function to Display Products
 function displayProducts(products, containerId) {
 
     const container = document.getElementById(containerId);
@@ -53,17 +49,44 @@ function displayProducts(products, containerId) {
 }
 
 
+// Featured Products - Homepage
+const featuredContainer = document.getElementById("featured-products");
 
-// Homepage featured producta
+if (featuredContainer) {
 
-const featuredProducts = wines
-    .filter(wine => wine.featured)
-    .slice(0, 4);
+    const featuredProducts = wines
+        .filter(wine => wine.featured)
+        .slice(0, 4);
 
-displayProducts(featuredProducts, "featured-products");
+    displayProducts(featuredProducts, "featured-products");
+}
 
 
+// All Products / Category Filter - Products Page
+const productsContainer = document.getElementById("all-products");
 
-// All products
+if (productsContainer) {
 
-displayProducts(wines, "all-products");
+    const params = new URLSearchParams(window.location.search);
+    const category = params.get("category");
+
+    const productsTitle = document.getElementById("products-title");
+
+    if (category) {
+
+        const filteredProducts = wines.filter(
+            wine => wine.category === category
+        );
+
+        displayProducts(filteredProducts, "all-products");
+
+        if (productsTitle) {
+            productsTitle.textContent = category;
+        }
+
+    } else {
+
+        displayProducts(wines, "all-products");
+
+    }
+}
