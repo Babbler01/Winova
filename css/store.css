@@ -1001,3 +1001,157 @@ option {
     color: var(--white);
 }
 
+/* Search Page */
+
+/* =========================
+   SEARCH PAGE
+========================= */
+
+.search-section {
+    width: 100%;
+    padding: 60px 0 100px;
+}
+
+
+/* Search Introduction */
+
+.search-section .section-top {
+    width: 100%;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.search-section .section-top h2 {
+    margin: 10px 0 15px;
+}
+
+.search-section .section-top p:last-child {
+    max-width: 600px;
+    line-height: 1.7;
+}
+
+
+/* Search Form */
+
+.search-form {
+    display: flex;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.search-form input {
+    flex: 1;
+    min-width: 0;
+    padding: 16px 20px;
+    border: 1px solid var(--lightgrey);
+    outline: none;
+    font: inherit;
+    font-family: var(--bodyfont);
+    box-sizing: border-box;
+}
+
+.search-form input:focus {
+    border-color: var(--black);
+}
+
+.search-form button {
+    padding: 16px 35px;
+    border: none;
+    background: var(--red);
+    color: var(--white);
+    font-family: var(--bodyfont);
+    cursor: pointer;
+}
+
+.search-form button:hover {
+    background: var(--yellow);
+    color: var(--black);
+}
+
+
+/* Search Message */
+
+.search-message {
+    margin-bottom: 30px;
+    font-family: var(--bodyfont);
+}
+
+
+/* Search Results */
+
+.search-results {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+
+/* Individual Result */
+
+.search-result-card {
+    border: 1px solid var(--lightgrey);
+}
+
+.search-result-image {
+    width: 100%;
+    height: 280px;
+}
+
+.search-result-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.search-result-info {
+    padding: 20px;
+}
+
+.search-result-category {
+    margin-bottom: 8px;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+.search-result-name {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.search-result-price {
+    display: block;
+    margin-bottom: 20px;
+    font-family: var(--bodyfont);
+    font-weight: 600;
+}
+
+.search-result-link {
+    display: inline-block;
+    text-decoration: none;
+    font-family: var(--bodyfont);
+    color: var(--black);
+    border-bottom: 1px solid var(--black);
+}
+
+
+/* Empty Search */
+
+.search-empty {
+    grid-column: 1 / -1;
+    padding: 40px 0;
+}
+
+
+/* Tablet */
+
+@media (max-width: 900px) {
+
+    .search-results {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
