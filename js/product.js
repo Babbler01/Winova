@@ -80,6 +80,76 @@ function displayProduct(product) {
     `;
 }
 
+// Add to cart
+function setupProductCart() {
+
+    let quantity = 1;
+
+    const quantityDisplay = document.getElementById("quantity");
+    const decreaseButton = document.getElementById("decrease");
+    const increaseButton = document.getElementById("increase");
+    const addToCartButton = document.querySelector(".add-to-cart");
+
+
+    decreaseButton.addEventListener("click", () => {
+
+        if (quantity > 1) {
+            quantity--;
+            quantityDisplay.textContent = quantity;
+        }
+
+    });
+
+
+    increaseButton.addEventListener("click", () => {
+
+        quantity++;
+        quantityDisplay.textContent = quantity;
+
+    });
+
+
+    addToCartButton.addEventListener("click", () => {
+
+        addToCart(product, quantity);
+
+    });
+
+}
+
+function addToCart(product, quantity) {
+
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    const existingProduct = cart.find(
+        item => item.id === product.id
+    );
+
+
+    if (existingProduct) {
+
+        existingProduct.quantity += quantity;
+
+    } else {
+
+        cart.push({
+            id: product.id,
+            name: product.name,
+            price: product.price,
+            image: product.image,
+            quantity: quantity
+        });
+
+    }
+
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+    updateCartCount();
+
+    alert(`${product.name} has been added to your cart.`);
+
+}
 
 // Create Related Product Card
 function createRelatedProductCard(wine) {
@@ -147,12 +217,15 @@ function displayRelatedProducts() {
 }
 
 
+
 // Display Page
 if (product) {
 
     displayProduct(product);
 
     displayRelatedProducts();
+
+    setupProductCart();
 
 } else {
 
