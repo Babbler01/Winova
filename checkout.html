@@ -58,10 +58,377 @@
         <div class="bread layout horizontal">
             <a href="index.html" class="anch">Home</a>
             <p class="angle">></p>
+            <a href="cart.html" class="anch">Cart</a>
+            <p class="angle">></p>
             <p class="base">Checkout</p>
         </div>
 
-        
+
+        <div class="checkout-section">
+
+            <div class="layout">
+
+                <div class="section-top">
+                    <h2>Checkout</h2>
+                </div>
+
+
+                <div class="checkout-layout">
+
+                    <!-- Checkout Form -->
+
+                    <div class="checkout-form">
+
+                        <form id="checkout-form">
+
+                            <!-- Customer Information -->
+
+                            <div class="checkout-block">
+
+                                <h3>Contact Information</h3>
+
+                                <div class="form-group">
+
+                                    <label for="email">
+                                        Email Address
+                                    </label>
+
+                                    <input
+                                        type="email"
+                                        id="email"
+                                        name="email"
+                                        placeholder="Enter your email address"
+                                        required
+                                    >
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- Shipping Information -->
+
+                            <div class="checkout-block">
+
+                                <h3>Shipping Information</h3>
+
+                                <div class="form-row">
+
+                                    <div class="form-group">
+
+                                        <label for="first-name">
+                                            First Name
+                                        </label>
+
+                                        <input
+                                            type="text"
+                                            id="first-name"
+                                            required
+                                        >
+
+                                    </div>
+
+
+                                    <div class="form-group">
+
+                                        <label for="last-name">
+                                            Last Name
+                                        </label>
+
+                                        <input
+                                            type="text"
+                                            id="last-name"
+                                            required
+                                        >
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="form-group">
+
+                                    <label for="address">
+                                        Delivery Address
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        id="address"
+                                        placeholder="Street address"
+                                        required
+                                    >
+
+                                </div>
+
+
+                                <div class="form-row">
+
+                                    <div class="form-group">
+
+                                        <label for="city">
+                                            City
+                                        </label>
+
+                                        <input
+                                            type="text"
+                                            id="city"
+                                            required
+                                        >
+
+                                    </div>
+
+
+                                    <div class="form-group">
+
+                                        <label for="state">
+                                            State
+                                        </label>
+
+                                        <select id="state" required>
+
+                                            <option value="">
+                                                Select State
+                                            </option>
+
+                                            <option value="Lagos">
+                                                Lagos
+                                            </option>
+
+                                            <option value="Abuja">
+                                                Abuja
+                                            </option>
+
+                                            <option value="Oyo">
+                                                Oyo
+                                            </option>
+
+                                            <option value="Rivers">
+                                                Rivers
+                                            </option>
+
+                                            <option value="Kano">
+                                                Kano
+                                            </option>
+
+                                            <option value="Ogun">
+                                                Ogun
+                                            </option>
+
+                                        </select>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="form-group">
+
+                                    <label for="phone">
+                                        Phone Number
+                                    </label>
+
+                                    <input
+                                        type="tel"
+                                        id="phone"
+                                        placeholder="+234..."
+                                        required
+                                    >
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- Shipping Method -->
+
+                            <div class="checkout-block">
+
+                                <h3>Shipping Method</h3>
+
+                                <div class="shipping-options">
+
+                                    <label class="shipping-option">
+
+                                        <input
+                                            type="radio"
+                                            name="shipping"
+                                            value="2500"
+                                            data-name="Standard Delivery"
+                                            checked
+                                        >
+
+                                        <div>
+
+                                            <strong>
+                                                Standard Delivery
+                                            </strong>
+
+                                            <span>
+                                                3–5 business days
+                                            </span>
+
+                                        </div>
+
+                                        <strong>
+                                            ₦2,500
+                                        </strong>
+
+                                    </label>
+
+
+                                    <label class="shipping-option">
+
+                                        <input
+                                            type="radio"
+                                            name="shipping"
+                                            value="5000"
+                                            data-name="Express Delivery"
+                                        >
+
+                                        <div>
+
+                                            <strong>
+                                                Express Delivery
+                                            </strong>
+
+                                            <span>
+                                                1–2 business days
+                                            </span>
+
+                                        </div>
+
+                                        <strong>
+                                            ₦5,000
+                                        </strong>
+
+                                    </label>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- Payment Method -->
+
+                            <div class="checkout-block">
+
+                                <h3>Payment Method</h3>
+
+                                <div class="payment-options">
+
+                                    <label class="payment-option">
+
+                                        <input
+                                            type="radio"
+                                            name="payment"
+                                            value="card"
+                                            checked
+                                        >
+
+                                        <div>
+
+                                            <strong>
+                                                Card Payment
+                                            </strong>
+
+                                            <span>
+                                                Pay securely with your card
+                                            </span>
+
+                                        </div>
+
+                                    </label>
+
+
+                                    <label class="payment-option">
+
+                                        <input
+                                            type="radio"
+                                            name="payment"
+                                            value="transfer"
+                                        >
+
+                                        <div>
+
+                                            <strong>
+                                                Bank Transfer
+                                            </strong>
+
+                                            <span>
+                                                Pay via bank transfer
+                                            </span>
+
+                                        </div>
+
+                                    </label>
+
+                                </div>
+
+                            </div>
+
+
+                            <button
+                                type="submit"
+                                class="place-order-button"
+                            >
+                                Place Order
+                            </button>
+
+                        </form>
+
+                    </div>
+
+
+                    <!-- Order Summary -->
+
+                    <aside class="checkout-summary">
+
+                        <h3>Order Summary</h3>
+
+                        <div id="checkout-items">
+                            <!-- Cart items generated by JS -->
+                        </div>
+
+
+                        <div class="summary-row">
+
+                            <span>Subtotal</span>
+
+                            <strong id="checkout-subtotal">
+                                ₦0
+                            </strong>
+
+                        </div>
+
+
+                        <div class="summary-row">
+
+                            <span>Shipping</span>
+
+                            <strong id="checkout-shipping">
+                                ₦2,500
+                            </strong>
+
+                        </div>
+
+
+                        <div class="summary-row summary-total">
+
+                            <span>Total</span>
+
+                            <strong id="checkout-total">
+                                ₦0
+                            </strong>
+
+                        </div>
+
+                    </aside>
+
+                </div>
+
+            </div>
+
+        </div>
         
 
 
@@ -114,8 +481,8 @@
 
     
     <!-- Scripts -->
-    <!-- <script src="js/products.js"></script>
-    <script src="js/app.js"></script> -->
+    <script src="js/cart.js"></script>
+    <script src="js/checkout.js"></script>
     
 </body>
 </html>

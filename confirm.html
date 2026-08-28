@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/store.css">
+    <title>Order Confirmaation | Winora Brewery</title>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+
+        <div class="layout horizontal">
+
+            <!-- navigation -->
+            <nav>
+                <a href="products.html">Products</a>
+                <a href="collection.html">Collections</a>
+                <a href="partners.html">Partners</a>
+                <a href="about.html">About</a>
+            </nav>
+
+            <!-- logo -->
+            <div class="logo">
+                <a href="index.html">
+                    <img src="img/site/winova-b.png" alt="Winora">
+                </a>
+            </div>
+
+            <!-- icons -->
+            <div class="side-nav">
+                <a href="search.html">
+                    <img src="img/site/search.png" alt="search">
+                </a>
+
+                <a href="account.html">
+                    <img src="img/site/user.png" alt="phone">
+                </a>
+
+                <a href="contact.html">
+                    <img src="img/site/call.png" alt="phone">
+                </a>
+                
+                <a href="cart.html" class="cart-icon">
+                    <img src="img/site/cart.png" alt="cart">
+                    <span id="cart-count">0</span>
+                </a>
+            </div>
+
+        </div>
+
+    </header>
+
+    <main>
+
+        <div class="bread layout horizontal">
+            <a href="index.html" class="anch">Home</a>
+            <p class="angle">></p>
+            <a href="cart.html" class="anch">Cart</a>
+            <p class="angle">></p>
+            <p class="base">Confirmation</p>
+        </div>
+
+        <!-- Confirmation -->
+
+        <section class="confirmation-section">
+
+            <div class="layout">
+
+
+                <!-- Success Message -->
+
+                <div class="confirmation-header">
+
+                    <div class="success-icon">
+
+                        ✓
+
+                    </div>
+
+
+                    <p class="section-tag">
+                        ORDER CONFIRMED
+                    </p>
+
+
+                    <h1>
+                        Thank You for Your Order!
+                    </h1>
+
+
+                    <p>
+                        Your order has been received and is
+                        being prepared for delivery.
+                    </p>
+
+
+                    <div class="order-number">
+
+                        <span>
+                            Order Number
+                        </span>
+
+                        <strong id="order-number">
+                            --
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Order Content -->
+
+                <div class="confirmation-layout">
+
+
+                    <!-- Order Details -->
+
+                    <div class="confirmation-details">
+
+
+                        <!-- Customer -->
+
+                        <div class="confirmation-block">
+
+                            <h3>
+                                Customer Information
+                            </h3>
+
+
+                            <div class="customer-details">
+
+                                <p>
+                                    <strong>Name:</strong>
+
+                                    <span id="customer-name">
+                                        --
+                                    </span>
+                                </p>
+
+
+                                <p>
+                                    <strong>Email:</strong>
+
+                                    <span id="customer-email">
+                                        --
+                                    </span>
+                                </p>
+
+
+                                <p>
+                                    <strong>Phone:</strong>
+
+                                    <span id="customer-phone">
+                                        --
+                                    </span>
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- Delivery -->
+
+                        <div class="confirmation-block">
+
+                            <h3>
+                                Delivery Information
+                            </h3>
+
+
+                            <div class="customer-details">
+
+                                <p>
+                                    <strong>Address:</strong>
+
+                                    <span id="customer-address">
+                                        --
+                                    </span>
+                                </p>
+
+
+                                <p>
+                                    <strong>City:</strong>
+
+                                    <span id="customer-city">
+                                        --
+                                    </span>
+                                </p>
+
+
+                                <p>
+                                    <strong>State:</strong>
+
+                                    <span id="customer-state">
+                                        --
+                                    </span>
+                                </p>
+
+
+                                <p>
+                                    <strong>Shipping:</strong>
+
+                                    <span id="shipping-method">
+                                        --
+                                    </span>
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- Payment -->
+
+                        <div class="confirmation-block">
+
+                            <h3>
+                                Payment Method
+                            </h3>
+
+
+                            <p id="payment-method">
+                                --
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Order Summary -->
+
+                    <aside class="confirmation-summary">
+
+                        <h3>
+                            Order Summary
+                        </h3>
+
+
+                        <div id="confirmation-items">
+
+                            <!-- Items generated by JavaScript -->
+
+                        </div>
+
+
+                        <div class="summary-row">
+
+                            <span>
+                                Subtotal
+                            </span>
+
+                            <strong id="confirmation-subtotal">
+                                ₦0
+                            </strong>
+
+                        </div>
+
+
+                        <div class="summary-row">
+
+                            <span>
+                                Shipping
+                            </span>
+
+                            <strong id="confirmation-shipping">
+                                ₦0
+                            </strong>
+
+                        </div>
+
+
+                        <div class="summary-row summary-total">
+
+                            <span>
+                                Total
+                            </span>
+
+                            <strong id="confirmation-total">
+                                ₦0
+                            </strong>
+
+                        </div>
+
+                    </aside>
+
+                </div>
+
+
+
+                <!-- Actions -->
+
+                <div class="confirmation-actions">
+
+                    <a
+                        href="products.html"
+                        class="continue-shopping"
+                    >
+                        Continue Shopping
+                    </a>
+
+                    <a
+                        href="index.html"
+                        class="back-home"
+                    >
+                        Back to Home
+                    </a>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+    </main>
+
+    <footer>
+
+        <div class="horizontal layout">
+            <div class="foot-grid">
+                <div class="foot">
+                    <a href="index.html">
+                        <img src="img/site/winova-w.png" alt="White Logo">
+                    </a>
+                    <p>Premium wines from selected vineyards around the world.</p>
+                </div>
+
+                <div class="foot">
+                    <h6>Quick Links</h6>
+                    <div class="nav">
+                        <a href="about.html">About</a>
+                        <a href="collection.html">Collections</a>
+                        <a href="partners.html">Partners</a>
+                        <a href="contact.html">Contact</a>
+                    </div>
+                </div>
+
+                <div class="foot">
+                    <h6>Categories</h6>
+                    <div class="nav">
+                        <a href="products.html?category=Red%20Wine">Red Wine</a>
+                        <a href="products.html?category=Sparkling%20Wine">Sparkling Wine</a>
+                        <a href="products.html?category=White%20Wine">White Wine</a>
+                        <a href="products.html?category=Rosé">Rose Wine</a>
+                    </div>
+                </div>
+
+                
+            </div>
+            
+
+        </div>
+
+        <div class="horizontal layout copyright">
+
+            <p>Copyright © 2026 Winova Brews | Developed by Philip</p>
+
+        </div>
+
+    </footer>
+
+    
+    <!-- Scripts -->
+    <script src="js/cart.js"></script>
+    <script src="js/confirm.js"></script>
+    
+</body>
+</html>
