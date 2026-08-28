@@ -60,10 +60,120 @@
             <p class="base">Contact</p>
         </div>
 
-        
-        
+
+        <div class="contact horizontal layout">
+            <div class="section-top">
+                <h2>get in touch</h2>
+            </div>
+
+            <div class="contact-body">
+
+                <div class="cnt-crd">
+                    <h6>Email Address</h6>
+                    <p>contact@winova.com.ng</p>
+                </div>
+
+                <div class="cnt-crd">
+                    <h6>Phone Number</h6>
+                    <p>+2348 123 456 7890</p>
+                </div>
+
+                <div class="cnt-crd">
+                    <h6>Address</h6>
+                    <p>Shop No. 8, Oshidi, Shogunle, 19 Abiodun St, Lagos</p>
+                </div>
+
+            </div>
+
+            <div class="maps">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3767.601412143689!2d3.3500988637542704!3d6.5565941200563005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b9203109ce71d%3A0x8804c4241e963ba!2sVineyard%20Wine!5e1!3m2!1sen!2sng!4v1787903541275!5m2!1sen!2sng"  allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            </div>
+
+            <div class="contact-form">
+                <div class="contact-form-content">
+
+                    <p class="section-tag">GET IN TOUCH</p>
+
+                    <h3>Send Us a Message</h3>
+
+                    <p>
+                        Have a question about our wines, orders, partnerships, or
+                        services? Fill out the form below and we'll get back to you.
+                    </p>
+
+                </div>
 
 
+                <form id="contact-form">
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+
+                            <input type="text" id="name" name="name"  placeholder="Enter your full name">
+
+                            <small class="error-message" id="name-error"></small>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="Enter your email address"
+                            >
+
+                            <small class="error-message" id="email-error"></small>
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+
+                        <input
+                            type="text"
+                            id="subject"
+                            name="subject"
+                            placeholder="What is your message about?"
+                        >
+
+                        <small class="error-message" id="subject-error"></small>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+
+                        <textarea
+                            id="message"
+                            name="message"
+                            rows="6"
+                            placeholder="Write your message here..."
+                        ></textarea>
+
+                        <small class="error-message" id="message-error"></small>
+                    </div>
+
+
+                    <button type="submit" class="submit-button">
+                        Send Message
+                    </button>
+
+                    <p id="form-success" class="form-success"></p>
+
+                </form>
+            </div>
+            
+
+        </div>
+        
+        
     </main>
 
     <footer>
@@ -113,8 +223,7 @@
 
     
     <!-- Scripts -->
-    <!-- <script src="js/products.js"></script>
-    <script src="js/app.js"></script> -->
+    <script src="js/contact.js"></script>
     
 </body>
 </html>
