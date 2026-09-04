@@ -57,20 +57,17 @@ function displayProducts(products, containerId) {
         return;
     }
 
-    container.innerHTML = products
-        .map(wine => createProductCard(wine))
-        .join("");
+    container.innerHTML = products.map(wine => createProductCard(wine)).join("");
 }
 
+displayProducts(wines, "all-products");
 
 // Featured Products - Homepage
 const featuredContainer = document.getElementById("featured-products");
 
 if (featuredContainer) {
 
-    const featuredProducts = wines
-        .filter(wine => wine.featured)
-        .slice(0, 4);
+    const featuredProducts = wines.filter(wine => wine.featured).slice(0, 4);
 
     displayProducts(featuredProducts, "featured-products");
 }
@@ -150,7 +147,7 @@ if (productsContainer) {
             );
         }
 
-
+        // Display all products
         displayProducts(filteredProducts, "all-products");
     }
 
@@ -202,8 +199,7 @@ function filterProducts() {
 
         filteredProducts = filteredProducts.filter(
             wine =>
-                wine.price >= minPrice &&
-                wine.price <= maxPrice
+                wine.price >= minPrice && wine.price <= maxPrice
         );
     }
 
@@ -216,8 +212,7 @@ function filterProducts() {
 
         filteredProducts = filteredProducts.filter(
             wine =>
-                wine.alcohol >= minAlcohol &&
-                wine.alcohol <= maxAlcohol
+                wine.alcohol >= minAlcohol && wine.alcohol <= maxAlcohol
         );
     }
 
@@ -226,19 +221,13 @@ function filterProducts() {
 }
 
 if (categoryFilter) {
-
     categoryFilter.addEventListener("change", filterProducts);
-
 }
 
 if (priceFilter) {
-
     priceFilter.addEventListener("change", filterProducts);
-
 }
 
 if (alcoholFilter) {
-
     alcoholFilter.addEventListener("change", filterProducts);
-
 }

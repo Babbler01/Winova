@@ -9,9 +9,7 @@ const shippingOptions = document.querySelectorAll(
 
 
 function getCart() {
-
     return JSON.parse(localStorage.getItem("cart")) || [];
-
 }
 
 
