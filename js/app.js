@@ -1,7 +1,7 @@
 // Function to Create Product Card
 function createProductCard(wine) {
     return `
-        <div class="product-card">
+        <a href="product.html?id=${wine.id}" class="product-card">
 
             <div class="product-image">
                 <img src="${wine.image}" alt="${wine.name}">
@@ -21,15 +21,11 @@ function createProductCard(wine) {
                         ₦${wine.price.toLocaleString()}
                     </span>
 
-                    <a href="product.html?id=${wine.id}" class="view-product">
-                        View Details
-                    </a>
-
                 </div>
 
             </div>
 
-        </div>
+        </a>
     `;
 }
 
